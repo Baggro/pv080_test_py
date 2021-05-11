@@ -9,6 +9,7 @@ import subprocess
 # Input injection
 def transcode_file(request, filename):
     command = 'ffmpeg -i "{source}" output_file.mpg'.format(source=filename)
+    # exec command
     subprocess.call(command, shell=True)  # a bad idea!
 
 
